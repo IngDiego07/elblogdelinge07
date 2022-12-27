@@ -1,0 +1,295 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'open sans';
+    text-align: center;
+    background: #e7e2e2;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #0B486B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, hsla(20, 92%, 53%, 0.63), hsla(202, 81%, 23%, 0.623)), url(../img/travv.png);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, hsla(20, 92%, 53%, 0.63), hsla(202, 81%, 23%, 0.623)), url(../img/travv.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+    
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: #fff;
+
+}
+
+.textos-header h2{
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+.texto{
+    padding: 30px 30px 30px 30px;
+    font-size: 30px;
+    vertical-align: top;
+    margin: 50px 50px;
+    font-family: 'Arial';
+    text-indent: 15em;
+  }
+
+  p{
+    text-align: center;
+    padding: 40px;
+
+  }
+
+.alinear-izquierda{
+    float: left;
+}
+img.alinear-izquierda{
+    padding:  20px 20px;
+    width: 500px;
+    height: 300px;
+    margin: 7px 20px 20px 20px;
+}
+
+.alinear-derecha{
+    width: 500px;
+    height: 300px;
+    clear: right;
+    float: right;
+    margin: 7px 20px 20px 20px;
+}
+
+.linea-tiempo {
+    position: relative;
+    width: 500px;
+    max-width: 95vw;
+    height: 100%;
+    font-family: Arial;
+    margin: 60px 60px ;
+  }
+  
+  .linea-tiempo::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: rgb(245, 98, 25);
+    left: 50%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .momento {
+    position: relative;
+    width: 45%;
+    box-sizing: border-box;
+  }
+  
+  .momento:nth-child(even) {
+    left: 55%;
+  }
+  
+  .momento::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 10px);
+    right: calc(-11.11% - 11.5px);
+    height: 20px;
+    width: 20px;
+    background-color: hwb(202 4% 58%);
+    border-radius: 50%;
+  }
+  
+  .momento:nth-child(even)::after {
+    left: calc(-11.11% - 8.5px);
+  }
+  
+  .momento h3 {
+    margin: 10px 0px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .momento .descripcion {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 22px;
+    font-size: 14px;
+  }
+  
+  .momento .descripcion::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: calc(50% + 10px);
+    height: 0;
+    width: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 12px solid #eee;
+  }
+  
+  .momento:nth-child(even) .descripcion {
+    background-color: #3393FE;
+    color: white;
+  }
+  
+  .momento:nth-child(even) .descripcion::after{
+    left: -10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 12px solid #3393FE;
+    border-left: none;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+    text-align: center;
+}
+
+.computadora h2{
+
+    display:inline-block;
+    position: relative;
+    color: #565969;
+    font-family: 'Arial', cursive;
+    padding-left: 30px;
+}
+
+
+h2::after,h2::before{
+    content:'';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color:currentColor;
+    top: 0.6em;
+    transform:scale(0);
+    transition:all 0.2s ease-in;
+
+}
+h2:hover::before, h2:hover::after{
+    transform: scale(1);
+
+}
+h2::before{
+    left:-148px;
+}
+
+h2::after{
+    right:-148px;
+}
+
+table{
+    margin: 40px 40px;
+}
+thead{
+    background-color: #0B486B;
+    color: aliceblue;
+    font-weight: bold;
+}
+td,th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+.imagenvonneumann{
+    padding: 30px;
+    
+}
+
+.imagenhardvard{
+    padding: 30px;
+}
+
+.imagenarm{
+    padding: 30px;
+}
+
+.imagenpipeline{
+    padding: 30px;
+}
+
+.imagenOS{
+    padding: 30px;
+}
+
+.imagenintel{
+    padding: 30px;
+}
+
+.imagenAMD{
+    padding: 30px;
+}
+
+.imagenSPARC{
+    padding: 30px;
+}
+
+.powerpc{
+    padding: 30px;
+}
+
+.buses-de-datos{
+    padding: 30px;
+}
+/*  About us */
+
+
+
+/* footer */
+
